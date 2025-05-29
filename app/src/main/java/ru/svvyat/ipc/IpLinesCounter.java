@@ -9,9 +9,15 @@ import java.util.regex.Pattern;
 
 import static java.util.regex.Pattern.compile;
 
-public class IpLinesCalculator implements DistinctFileLinesCalculator<Long> {
+public class IpLinesCounter implements DistinctFileLinesCounter<Long> {
     private static final Pattern IP_REGEX = compile("^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$");
 
+    /**
+     * Выбран тип лонг, так как нет смысла брать болешь.
+     * Технически было бы достаточно и unsigned int, но в java такого нет
+     * @param fileName
+     * @return количество уникальных строк формата ip
+     */
     @Override
     public Long calculateDistinct(String fileName) {
 

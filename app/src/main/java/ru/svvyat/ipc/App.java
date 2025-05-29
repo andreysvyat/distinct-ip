@@ -6,6 +6,6 @@ package ru.svvyat.ipc;
 public class App {
 
     public static void main(String[] args) {
-        System.out.println(new IpLinesCalculator().calculateDistinct(args[0]));
+        System.out.println(new IpLinesCounter().calculateDistinct(args[0]));
     }
 }

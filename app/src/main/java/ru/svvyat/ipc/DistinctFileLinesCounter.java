@@ -1,5 +1,5 @@
 package ru.svvyat.ipc;
 
-public interface DistinctFileLinesCalculator<R> {
+public interface DistinctFileLinesCounter<R> {
     R calculateDistinct(String fileName);
 }
